@@ -1,0 +1,8 @@
+.person_name{
+  margin: 20px 0px 0px 10px;
+  font-size: 18px;
+}
+.person_name_link{
+  color: white;
+  transition: 0.3s;
+}

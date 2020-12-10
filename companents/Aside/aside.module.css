@@ -1,0 +1,31 @@
+
+.aside{
+  position: sticky;
+  top: 50px;
+  left: 0;
+  height: 300px;
+  width: 140px;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+.nav_list{
+  list-style-type: none;
+}
+.nav_list_item{
+  margin: 20px 0 ;
+}
+.nav_item_link{
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  color: #848484;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.nav_item_link:hover{
+  text-decoration: underline;
+}
+.active{
+  background-color: rgba(149, 149, 149, 0.345);
+  text-decoration: none;
+}

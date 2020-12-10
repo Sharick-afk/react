@@ -1,0 +1,12 @@
+.main{
+  display: flex;
+  width: 100%;
+}
+.contacts_list{
+  width: 25%;
+}
+
+.messages_list{
+  width: 50%;
+
+}

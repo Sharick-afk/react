@@ -1,0 +1,35 @@
+.header{
+  background-color: #333336;
+}
+.head_container{
+  display: flex;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo_img{
+  width: 60px;
+  height: 60px;
+}
+
+.search_box{
+  display: flex;
+  height: 30px;
+  
+}
+.search_input{
+  padding: 0 0 0 7px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+
+}
+.search_btn{
+  line-height: 30px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}

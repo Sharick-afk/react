@@ -1,0 +1,39 @@
+.post{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #333336 ;
+  text-align: center;
+  color: #fff;
+}
+
+.message_box{
+  width: 100%;
+  margin: 20px 10px 10px 10px;
+  padding: 0 10px;
+}
+.post_message{
+  width: 100%;
+  margin: 20px ;
+  text-align: left;
+  font-size: 16px;
+}
+.like_box{
+  position: relative;
+  margin: 0 0 10px 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+.like_box:after{
+  position: absolute;
+  display: block;
+  right: -20px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  content: '';
+  transform: translate(0, -50%);
+  background-image: url(https://www.flaticon.com/svg/static/icons/svg/126/126473.svg);
+}
