@@ -1,0 +1,16 @@
+
+.friend_item{
+  width: 45%;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+}
+.friend_ava{
+  margin: 0;
+}
+
+.friend_link{
+  color: #fff;
+  white-space: nowrap; 
+  overflow: hidden;
+}

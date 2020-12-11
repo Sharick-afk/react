@@ -4,12 +4,14 @@
   top: 50px;
   left: 0;
   height: 300px;
-  width: 140px;
+  width: 180px;
   margin-top: 10px;
   padding: 0 10px;
 }
 .nav_list{
   list-style-type: none;
+  padding: 0;
+  margin-bottom: 50px;
 }
 .nav_list_item{
   margin: 20px 0 ;
@@ -28,4 +30,8 @@
 .active{
   background-color: rgba(149, 149, 149, 0.345);
   text-decoration: none;
+}
+.friend_box{
+  display: flex;
+  flex-wrap: wrap;
 }

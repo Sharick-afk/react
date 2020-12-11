@@ -11,22 +11,23 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 
 
-function App() {
-  return (
-          <BrowserRouter>
-            <Header />
-            <div className={s.container}>
-                <Aside />
-                <div className={s.main}>
-                  <Route path='/main' component={Main}/>
-                  <Route path='/dialogs' component={Dialogs}/>
-                  <Route path='/news' component={News}/>
-                  <Route path='/settings' component={Settings}/>
-                  <Route path='/music' component={Music}/>
-                </div>
-            </div>
-          </BrowserRouter>
-  );
+function App(props) {
+return (
+  <BrowserRouter>
+    <Header />
+    <div className={s.container}>
+        <Aside friends={props.state.friends}/>
+        <div className={s.main}>
+          <Route path='/main'render={ () => <Main addPost={props.addPost} posts={props.state.posts} avatars={props.state.avatars} />} />
+          <Route path='/dialogs' render={ () => <Dialogs avatars={props.state.avatars}messages={props.state.messages}contacts={props.state.contacts} />}/>
+          <Route path='/news' render={News}/>
+          <Route path='/settings' render={Settings}/>
+          <Route path='/music' render={Music}/>
+        </div>
+    </div>
+  </BrowserRouter>
+);
+
 }
 
 export default App

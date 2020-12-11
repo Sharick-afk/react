@@ -12,7 +12,7 @@ function Post(props) {
       <span className={s.like_box}>
         {props.likeCount}
       </span>
-
+      <span className={s.hide} >{props.index}</span>
     </section>
   );
 }

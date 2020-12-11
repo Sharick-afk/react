@@ -1,12 +1,12 @@
 import React from 'react'
-import Avatar from './Avatar'
-import PersonName from './PersoneName'
+import PersonName from './PersoneName/PersoneName'
 import s from './personeinfo.module.css'
+import Avatar from './Avatar/Avatar'
 
 function PersonInfo(props) {
   return (
     <div className={s.persone_info}>
-      <Avatar  />
+      <Avatar />
       <PersonName name={props.name} />
     </div>
   );
