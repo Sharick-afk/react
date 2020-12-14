@@ -2,13 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-import {addPost} from './redux/state'
-import { BrowserRouter } from 'react-router-dom'
+import {addPost, addMessage, changeNewPostText } from './redux/state'
 
 export let renderTreee = (state) =>{
   ReactDOM.render(
     <React.StrictMode>
-      <App  state={state} addPost={addPost}/>
+      <App  state={state}
+            changeNewPostText={changeNewPostText}
+            addPost={addPost} 
+            addMessage={addMessage}/>
     </React.StrictMode>,
     document.getElementById('root')
   );

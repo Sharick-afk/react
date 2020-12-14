@@ -1,14 +1,14 @@
-import { renderTreee } from '../rerender'
-
+import {renderTreee} from '../rerender'
 let state = {
   posts: [
     {key:0,id:0, likeCount:5, message:'Lorem ipsum, dolor sit amet consectetur'},
     {key:1,id:1, likeCount:52, message:'Illum ipsam, quidem deleniti, distinctio sint'},
     {key:2,id:2, likeCount:11, message:'Molestiae labore voluptates modi minus mollitia'},
     {key:3,id:3, likeCount:7, message:'fugit eligendi odit fugiat '},
-    {key:4,id:4,likeCount:13, message:'quia quae numquam est perferendis'},
+    {key:4,id:4, likeCount:13, message:'quia quae numquam est perferendis'},
     {key:5,id:5, likeCount:6, message:'bаавы fsd'}
   ],
+  newPostText: 'something',
 
   contacts:[
     {key: 0,id:1, name:'Name1'},
@@ -73,14 +73,36 @@ let state = {
 
 
 }
-export let addPost = (postMessage) => {
+
+export let addPost = (newPostText) => {
   
   let newPost = {
     id:20,
-    message: postMessage,
+    message: state.newPostText,
     likesCount: 0
   }
-  state.posts.push(newPost);
+  state.posts.push(newPost)
+  state.newPostText = ''
+  
   renderTreee(state)
+  
 }
+export let  changeNewPostText  = (newText) => {
+
+  state.newPostText = (newText)
+  renderTreee(state)
+  
+}
+export let addMessage = (messageText) => {
+  
+  let newMessage = {
+    id:20,
+    message: messageText,
+    key: 50
+  }
+  state.messages.push(newMessage);
+  renderTreee(state)
+
+}
+
 export default state

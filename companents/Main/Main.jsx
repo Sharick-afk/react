@@ -9,7 +9,10 @@ function Main(props) {
   return (
     <main className={s.main}>
       <MyPage />
-      <Myposts posts={props.posts} addPost={props.addPost} />
+      <Myposts newPostText={props.newPostText} 
+               posts={props.posts}
+               changeNewPostText={props.changeNewPostText}
+               addPost={props.addPost} />
     </main>
   );
 }
