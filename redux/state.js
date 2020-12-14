@@ -1,4 +1,8 @@
-import {renderTreee} from '../rerender'
+
+let renderTreee = () => {
+  console.log('some')
+}
+
 let state = {
   posts: [
     {key:0,id:0, likeCount:5, message:'Lorem ipsum, dolor sit amet consectetur'},
@@ -84,13 +88,13 @@ export let addPost = (newPostText) => {
   state.posts.push(newPost)
   state.newPostText = ''
   
-  renderTreee(state)
+  renderTreee()
   
 }
 export let  changeNewPostText  = (newText) => {
 
   state.newPostText = (newText)
-  renderTreee(state)
+  renderTreee()
   
 }
 export let addMessage = (messageText) => {
@@ -101,8 +105,11 @@ export let addMessage = (messageText) => {
     key: 50
   }
   state.messages.push(newMessage);
-  renderTreee(state)
+  renderTreee()
 
+}
+export let subscribe = (observer) =>{
+  renderTreee = observer
 }
 
 export default state
